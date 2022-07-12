@@ -9,6 +9,9 @@ public class FizzBuzzRules {
     }
 
     private String getFizzRule(int number) {
+        if (Integer.toString(number).contains("3")) {
+            return "Fizz";
+        }
         return isDivisibleBy(number, 3) ? "Fizz" : "";
     }
 
