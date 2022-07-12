@@ -17,7 +17,7 @@ public class FizzBuzzRules {
     }
 
     private String getBuzzRule(int number) {
-        return isDivisibleBy(number, 5) ? "Buzz" : "";
+        return isDivisibleBy(number, 5) || numberContains(number, "5")? "Buzz" : "";
     }
 
     private boolean isDivisibleBy(int number, int divisor) {
