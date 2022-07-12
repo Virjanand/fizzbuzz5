@@ -13,7 +13,7 @@ public class FizzBuzzTest {
 
     @BeforeEach
     void createFizzBuzz() {
-        fizzBuzz = new FizzBuzz();
+        fizzBuzz = new FizzBuzz(new FizzBuzzRules());
     }
 
     @Test

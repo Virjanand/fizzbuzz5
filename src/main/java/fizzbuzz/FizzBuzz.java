@@ -8,7 +8,11 @@ import java.util.stream.Stream;
 
 public class FizzBuzz {
 
-    private final FizzBuzzRules fizzBuzzRules = new FizzBuzzRules();
+    private final FizzBuzzRules fizzBuzzRules;
+
+    public FizzBuzz(FizzBuzzRules fizzBuzzRules) {
+        this.fizzBuzzRules = fizzBuzzRules;
+    }
 
     public List<String> getNumbers(int from, int until) {
         return IntStream.rangeClosed(from, until).mapToObj(number -> toFizzBuzz(number, fizzBuzzRules.getRules(number))).collect(Collectors.toList());
