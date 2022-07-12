@@ -28,6 +28,7 @@ public class FizzBuzzTest {
                     "5, Buzz",
                     "6, Fizz",
                     "10, Buzz",
+                    "13, Fizz",
                     "15, FizzBuzz",
             }
     )
