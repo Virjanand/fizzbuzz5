@@ -6,19 +6,6 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-class FizzBuzzRules {
-    public Stream<Supplier<String>> getRules(int number) {
-        return Stream.of(() -> convertNumberToFizzBuzz(number, 3, "Fizz"), () -> convertNumberToFizzBuzz(number, 5, "Buzz"));
-    }
-
-    private String convertNumberToFizzBuzz(int number, int divisor, String result) {
-        if (number % divisor == 0) {
-            return result;
-        }
-        return "";
-    }
-}
-
 public class FizzBuzz {
 
     public List<String> getNumbers(int from, int until) {
