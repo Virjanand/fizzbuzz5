@@ -9,17 +9,21 @@ public class FizzBuzzRules {
     }
 
     private String getFizzRule(int number) {
-        return convertNumberToFizzBuzz(number, 3, "Fizz");
-    }
-
-    private String getBuzzRule(int number) {
-        return convertNumberToFizzBuzz(number, 5, "Buzz");
-    }
-
-    private String convertNumberToFizzBuzz(int number, int divisor, String result) {
-        if (number % divisor == 0) {
-            return result;
+        if (isDivisibleBy(number, 3)) {
+            return "Fizz";
         }
         return "";
     }
+
+    private String getBuzzRule(int number) {
+        if (isDivisibleBy(number, 5)) {
+            return "Buzz";
+        }
+        return "";
+    }
+
+    private boolean isDivisibleBy(int number, int divisor) {
+        return number % divisor == 0;
+    }
+
 }
